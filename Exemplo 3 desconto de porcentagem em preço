@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+    float preco;
+    printf("Digite o valor do produto: ");
+    scanf("%f", &preco);
+    preco -= preco*0.2;
+    printf("Valor com desconto: %.2f", preco);
+
+    return 0;
+}
