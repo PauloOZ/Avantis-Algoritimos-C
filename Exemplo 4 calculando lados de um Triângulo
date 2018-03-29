@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+    int a, b, c;
+    printf("Digite o lado maior: ");
+    scanf("%d", &a);
+    printf("Digite o segundo lado: ");
+    scanf("%d", &b);
+    printf("Digite o terceiro lado: ");
+    scanf("%d", &c);
+    if(a>b+c&&a>0&&b>0&&c>0){
+        if(a*a == b*b + c*c){
+            printf("\nÉ um triângulo retângulo");
+        }
+        if(a*a > b*b+c*c){
+            printf("\nÉ um triângulo obtusângulo");
+        }
+        if(a*a < b*b +c*c){
+            printf("\nÉ um triângulo acutângulo");
+        }
+    }
+    else{
+        printf("\nErro: os valores digitados não formam um triângulo");
+    }
+
+
+    return 0;
+}
