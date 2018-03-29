@@ -1,0 +1,22 @@
+#include <stdio.h> //é o que permite o programa ler e escrever
+#include <locale.h> // esse comando serve para achar o local (idioma) que o programa será inscrito
+
+int main(void) {
+	setlocale (LC_ALL, "Portuguese"); // aqui é definido o idioma
+	float nota1, nota2, media; // aqui é lançado o float é um número com ponto flutuante.
+
+	printf("Digite a primeira nota: "); // esse comando vai servir para printar na tela.
+	scanf("%f", &nota1); // esse comando serve para scanear a variavel lançada
+	printf("Digite a segunda nota: ");
+	scanf("%f", &nota2);
+	media = (nota1 + nota2)/2.0; //2.0 serve para o número não se converter inteiro.
+	printf("\nSua média é = %.1f", media); //o comando %.1f serve para printar uma casa depois da virgula.
+	if(media >=7){ // comando usado para verdadeiro ou falso, se caso for verdadeiro o programa continua, se for falso o
+        printf("\nVocê foi aprovado"); // programa pula para a ultima função.
+        	}
+            else{
+                printf("\nSe ferrou!");
+            }
+	return 0;
+}
+
